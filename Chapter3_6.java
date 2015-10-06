@@ -6,10 +6,10 @@ public class Chapter3_6{
 
 	public static void main(String [] args){
 		month [] choice = {month.January, month.February, month.March, month.April, month.May, month.June, month.July, month.August, month.September, month.October, month.November, month.December};
-
-
-	while(true){
+		
 		month select = (month)JOptionPane.showInputDialog(null, "pick a month", "Month", JOptionPane.INFORMATION_MESSAGE, null, choice, choice[0]);
+
+	while(select != null){
 		
 
 		String Spring = "Happy Spring days!";
@@ -70,9 +70,10 @@ public class Chapter3_6{
 		default:
 			JOptionPane.showMessageDialog(null, "Invalid Inmput");
 			}
-
+ 		        select = (month)JOptionPane.showInputDialog(null, "pick a month", "Month", JOptionPane.INFORMATION_MESSAGE, null, choice, choice[0]);
+			}
+		JOptionPane.showMessageDialog(null, "Good bye!");
 		}
-	
-	}
-
 }
+
+
